@@ -5,7 +5,6 @@ const mongoose = require("mongoose")
 const {Schema} = mongoose
 require('dotenv').config()
 
-//mongodb+srv://netflix-api-dev:jwoc29q2BwUzvyw3@cluster0.jizn1.mongodb.net/netflix-api-db-dev?retryWrites=true&w=majority
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.jizn1.mongodb.net/netflix-api-db-dev?retryWrites=true&w=majority`, {useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true});
 
 const User = mongoose.model('Users', new Schema(
